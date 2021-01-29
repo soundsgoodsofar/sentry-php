@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- Make the HTTP headers sanitizable in the `RequestIntegration` integration instead of removing them entirely (#1161)
+- Deprecate the `logger` option (#1167)
+- Pass the event hint from the `capture*()` methods down to the `before_send` callback (#1138)
+- Deprecate the `tags` option, see the [docs](https://docs.sentry.io/platforms/php/guides/laravel/enriching-events/tags/) for other ways to set tags (#1174)
+
 ## 3.1.2 (2021-01-08)
 
 - Fix unwanted call to the `before_send` callback with transaction events, use `traces_sampler` instead to filter transactions (#1158)
